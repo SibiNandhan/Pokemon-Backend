@@ -1,0 +1,60 @@
+use('game');
+db.battle.drop();
+db.battle.insertOne({
+    '_id':'test',
+    'playerOne':{
+        'pokemon':{
+        '_id':'pokemon-007',
+        "image":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+        "name":"wartortle",
+        "hp":115,
+        "pp":15,
+        "moves":[
+        {
+            "name":"Vine Whip",
+            "damage":17,
+            "pp":3
+        },
+        {
+            "name":"Tackle",
+            "damage":15,
+            "pp":2
+        },
+        {
+            "name":"Rest",
+            "damage":0,
+            "pp":-7
+        },
+        ]
+    }
+ }
+ ,
+ 'playerTwo':{
+        'pokemon':{
+        '_id':'pokemon-008',
+        "name":"butterfree",
+        "image":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
+        "hp":125,
+        "pp":20,
+        "moves":[
+        {
+            "name":"Vine Whip",
+            "damage":25,
+            "pp":3
+        },
+        {
+            "name":"Tackle",
+            "damage":10,
+            "pp":3
+        },
+        {
+            "name":"Rest",
+            "damage":0,
+            "pp":-1
+        }
+        ]
+    }
+}
+})
+
+db.battle.find({})
