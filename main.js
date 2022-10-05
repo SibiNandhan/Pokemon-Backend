@@ -136,7 +136,7 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(process.env.port || 4000, async () => {
+httpServer.listen(process.env.PORT || 4000, async () => {
   try {
     await mongoClient.connect();
     collections.pokemon = await mongoClient.db("game").collection("pokemon");
