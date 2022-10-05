@@ -72,8 +72,6 @@ io.on("connection", (socket) => {
     }
   });
   socket.on("select", async (player, pokemon) => {
-    console.log("select");
-    console.log(player, pokemon);
     try {
       if (player === 1) {
         let x = await collections.battles.updateOne(
